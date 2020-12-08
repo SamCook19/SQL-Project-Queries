@@ -1,0 +1,22 @@
+SELECT professor_grade_id, AVG(grades_percentage)
+FROM grades
+GROUP BY professor_grade_id;
+
+SELECT MAX(grades_percentage)
+FROM grades
+GROUP BY students_grade_id;
+
+SELECT course_grade_id, 
+count(students_grade_id)
+FROM grades 
+GROUP BY course_grade_id;
+
+SELECT course_grade_id, AVG(grades_percentage)
+FROM grades
+GROUP BY course_grade_id
+ORDER BY grades_percentage ASC;
+
+SELECT students_grade_id, professor_grade_id, count(grades_id) 
+FROM grades 
+GROUP BY students_grade_id, professor_grade_id;
+
